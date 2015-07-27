@@ -1,0 +1,21 @@
+//
+//  DBSEPrefix.pch
+//  dbstandupemail
+//
+//  Created by Daniele Bogo on 27/07/2015.
+//  Copyright (c) 2015 Daniele Bogo. All rights reserved.
+//
+
+#ifndef dbstandupemail_DBSEPrefix_pch
+#define dbstandupemail_DBSEPrefix_pch
+
+#import "NSObject+ObjectValidation.h"
+#import "UIColor+DBSEColors.h"
+#import "UIFont+DBSEFonts.h"
+#import "NSString+Localizable.h"
+
+#import "DBSELog.h"
+#import "DBSEConstants.h"
+#import "DBSEUserCredentials.h"
+
+#endif
