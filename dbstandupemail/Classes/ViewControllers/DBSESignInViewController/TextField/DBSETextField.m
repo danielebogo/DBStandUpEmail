@@ -8,17 +8,17 @@
 
 #import "DBSETextField.h"
 
-#import <PureLayout/PureLayout.h>
+#import <Masonry/Masonry.h>
 
 
 static NSString *NSStringFromFieldType(DBSEFieldsType type)
 {
     switch (type) {
-        case TPSGFieldsTypeEmail:
-            return [@"signup_placeholder_email" localizedString];
+        case TPSGFieldsTypeAuthToken:
+            return [@"signup_placeholder_token" localizedString];
 
-        case TPSGFieldsTypePassword:
-            return [@"signup_placeholder_password" localizedString];
+        case TPSGFieldsTypeAuthId:
+            return [@"signup_placeholder_auth_id" localizedString];
 
         case TPSGFieldsTypeNone:
             return @"";
@@ -69,7 +69,7 @@ static NSString *NSStringFromFieldType(DBSEFieldsType type)
     NSDictionary *attributes = @{ NSForegroundColorAttributeName:[UIColor dbse_darkGrey],
                                   NSFontAttributeName:[UIFont dbse_fontTypeThin] };
     
-    _textField = [UITextField newAutoLayoutView];
+    _textField = [UITextField new];
     _textField.textAlignment = NSTextAlignmentLeft;
     _textField.backgroundColor = [UIColor clearColor];
     _textField.textColor = [UIColor dbse_darkBlue];
@@ -85,18 +85,30 @@ static NSString *NSStringFromFieldType(DBSEFieldsType type)
     _textField.delegate = self;
     [self addSubview:_textField];
     
-    iconView_ = [UIImageView newAutoLayoutView];
+    iconView_ = [UIImageView new];
     iconView_.hidden = YES;
     [self addSubview:iconView_];
 }
 
 - (void)dbse_addConstraints
 {
-    leftInset_ = [_textField autoPinEdgesToSuperviewEdgesWithInsets:(UIEdgeInsets){ 0, 15.0f, 0, 15.0f }][1];
-    leftInset_.constant = [_icon isValidObject] ? 50.0f : 15.0f;
+    CGFloat left = [_icon isValidObject] ? 50.0f : 15.0f;
+    UIEdgeInsets insets = (UIEdgeInsets){ 0, left, 0, 15.0f };
     
-    [iconView_ autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:15.0f];
-    [iconView_ autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    __weak typeof(self)weakSelf = self;
+    
+    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(weakSelf).with.insets(insets);
+    }];
+    
+    [iconView_ mas_makeConstraints:^(MASConstraintMaker *make) {
+        __strong typeof(weakSelf)strongSelf = weakSelf;
+
+        if (strongSelf) {
+            make.left.equalTo(strongSelf).with.offset(15.0);
+            make.centerY.equalTo(strongSelf);
+        }
+    }];
 }
 
 

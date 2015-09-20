@@ -15,8 +15,8 @@ extern NSString *const kDBSEKeychainServiceName;
 //@class TPSGUser;
 @interface DBSEUserCredentials : NSObject
 
-@property (nonatomic, strong) NSString *userEmail;
-@property (nonatomic, strong) NSString *userToken;
+@property (nonatomic, strong) NSString *userAuthId;
+@property (nonatomic, strong) NSString *userAuthToken;
 
 + (instancetype)sharedInstance;
 

@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8AC8D8B48E600450990DED7E /* libPods-dbstandupemail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9751EBC824F4E09B2713671 /* libPods-dbstandupemail.a */; };
+		9A099B0F1BA8C3040021AEB4 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A099B0E1BA8C3040021AEB4 /* NSString+Encryption.m */; };
+		9A376B011B66B8A2006E764A /* DBSETimelineTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A376B001B66B8A2006E764A /* DBSETimelineTableView.m */; };
+		9A376B091B66BC04006E764A /* DBSEShieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A376B081B66BC04006E764A /* DBSEShieldView.m */; };
+		9A7484F51BAEFAF6001D00A5 /* DBSEContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7484F41BAEFAF6001D00A5 /* DBSEContentManager.m */; settings = {ASSET_TAGS = (); }; };
+		9A7485001BAEFB11001D00A5 /* DBSEHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7484F91BAEFB11001D00A5 /* DBSEHttpClient.m */; settings = {ASSET_TAGS = (); }; };
+		9A7485011BAEFB11001D00A5 /* NSDictionary+Succeeded.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7484FB1BAEFB11001D00A5 /* NSDictionary+Succeeded.m */; settings = {ASSET_TAGS = (); }; };
+		9A7485021BAEFB11001D00A5 /* DBSEHttpClient+Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7484FF1BAEFB11001D00A5 /* DBSEHttpClient+Team.m */; settings = {ASSET_TAGS = (); }; };
+		9A7485061BAF00CD001D00A5 /* DBSESignInContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485051BAF00CD001D00A5 /* DBSESignInContentView.m */; settings = {ASSET_TAGS = (); }; };
+		9A8208431B7253F100419919 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8208421B7253F100419919 /* InfoPlist.strings */; };
 		9AAB47971B664D0A00AEBF98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47961B664D0A00AEBF98 /* main.m */; };
 		9AAB47A51B664D0A00AEBF98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AAB47A31B664D0A00AEBF98 /* LaunchScreen.xib */; };
 		9AAB47B11B664D0A00AEBF98 /* dbstandupemailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47B01B664D0A00AEBF98 /* dbstandupemailTests.m */; };
@@ -16,10 +25,6 @@
 		9AAB47DA1B664F6800AEBF98 /* NSObject+ModelMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47C41B664F6800AEBF98 /* NSObject+ModelMapping.m */; };
 		9AAB47DB1B664F6800AEBF98 /* NSObject+ObjectValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47C71B664F6800AEBF98 /* NSObject+ObjectValidation.m */; };
 		9AAB47DC1B664F6800AEBF98 /* NSString+Localizable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47CA1B664F6800AEBF98 /* NSString+Localizable.m */; };
-		9AAB47DD1B664F6800AEBF98 /* NSDictionary+Succeeded.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47CE1B664F6800AEBF98 /* NSDictionary+Succeeded.m */; };
-		9AAB47DE1B664F6800AEBF98 /* DBSEHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47D01B664F6800AEBF98 /* DBSEHttpClient.m */; };
-		9AAB47DF1B664F6800AEBF98 /* DBHTTPClient+NewOperationMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47D31B664F6800AEBF98 /* DBHTTPClient+NewOperationMethods.m */; };
-		9AAB47E01B664F6800AEBF98 /* DBHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47D51B664F6800AEBF98 /* DBHTTPClient.m */; };
 		9AAB47E31B664FEB00AEBF98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAB47E21B664FEB00AEBF98 /* Images.xcassets */; };
 		9AAB47E81B66506400AEBF98 /* DBSEUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47E71B66506400AEBF98 /* DBSEUserCredentials.m */; };
 		9AAB48021B6657D500AEBF98 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AAB47EF1B6657D500AEBF98 /* Roboto-Black.ttf */; };
@@ -48,6 +53,9 @@
 		9AAB482A1B66617900AEBF98 /* DBSESignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB48291B66617900AEBF98 /* DBSESignInViewController.m */; };
 		9AAB482E1B66642D00AEBF98 /* DBSETextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB482D1B66642D00AEBF98 /* DBSETextField.m */; };
 		9AAB48301B66652C00AEBF98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AAB482F1B66652C00AEBF98 /* Localizable.strings */; };
+		9AAB48341B667A4000AEBF98 /* DBSEAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB48331B667A4000AEBF98 /* DBSEAlert.m */; };
+		9AAB483C1B6680D100AEBF98 /* DBSETimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB483B1B6680D100AEBF98 /* DBSETimeLineViewController.m */; };
+		B1F602C806197CD838E22EEC /* libPods-dbstandupemailTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8C77B1C92936EF72C4BAF /* libPods-dbstandupemailTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		789A2EF785146258EDBBD69B /* Pods-dbstandupemailTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dbstandupemailTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dbstandupemailTests/Pods-dbstandupemailTests.release.xcconfig"; sourceTree = "<group>"; };
+		8FD8C77B1C92936EF72C4BAF /* libPods-dbstandupemailTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dbstandupemailTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A099B0D1BA8C3040021AEB4 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
+		9A099B0E1BA8C3040021AEB4 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
+		9A376AFF1B66B8A2006E764A /* DBSETimelineTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSETimelineTableView.h; path = DBSETimeLineViewController/TableView/DBSETimelineTableView.h; sourceTree = "<group>"; };
+		9A376B001B66B8A2006E764A /* DBSETimelineTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSETimelineTableView.m; path = DBSETimeLineViewController/TableView/DBSETimelineTableView.m; sourceTree = "<group>"; };
+		9A376B071B66BC04006E764A /* DBSEShieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSEShieldView.h; path = ShieldView/DBSEShieldView.h; sourceTree = "<group>"; };
+		9A376B081B66BC04006E764A /* DBSEShieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSEShieldView.m; path = ShieldView/DBSEShieldView.m; sourceTree = "<group>"; };
+		9A7484F31BAEFAF6001D00A5 /* DBSEContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSEContentManager.h; path = Architecture/ContentManager/DBSEContentManager.h; sourceTree = "<group>"; };
+		9A7484F41BAEFAF6001D00A5 /* DBSEContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSEContentManager.m; path = Architecture/ContentManager/DBSEContentManager.m; sourceTree = "<group>"; };
+		9A7484F81BAEFB11001D00A5 /* DBSEHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSEHttpClient.h; sourceTree = "<group>"; };
+		9A7484F91BAEFB11001D00A5 /* DBSEHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSEHttpClient.m; sourceTree = "<group>"; };
+		9A7484FA1BAEFB11001D00A5 /* NSDictionary+Succeeded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Succeeded.h"; sourceTree = "<group>"; };
+		9A7484FB1BAEFB11001D00A5 /* NSDictionary+Succeeded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Succeeded.m"; sourceTree = "<group>"; };
+		9A7484FE1BAEFB11001D00A5 /* DBSEHttpClient+Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBSEHttpClient+Team.h"; sourceTree = "<group>"; };
+		9A7484FF1BAEFB11001D00A5 /* DBSEHttpClient+Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBSEHttpClient+Team.m"; sourceTree = "<group>"; };
+		9A7485041BAF00CD001D00A5 /* DBSESignInContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSESignInContentView.h; path = DBSESignInViewController/ContentView/DBSESignInContentView.h; sourceTree = "<group>"; };
+		9A7485051BAF00CD001D00A5 /* DBSESignInContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSESignInContentView.m; path = DBSESignInViewController/ContentView/DBSESignInContentView.m; sourceTree = "<group>"; };
+		9A8208421B7253F100419919 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9AAB47911B664D0A00AEBF98 /* dbstandupemail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dbstandupemail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAB47951B664D0A00AEBF98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AAB47961B664D0A00AEBF98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,14 +105,6 @@
 		9AAB47C71B664F6800AEBF98 /* NSObject+ObjectValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectValidation.m"; sourceTree = "<group>"; };
 		9AAB47C91B664F6800AEBF98 /* NSString+Localizable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Localizable.h"; sourceTree = "<group>"; };
 		9AAB47CA1B664F6800AEBF98 /* NSString+Localizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Localizable.m"; sourceTree = "<group>"; };
-		9AAB47CD1B664F6800AEBF98 /* NSDictionary+Succeeded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Succeeded.h"; sourceTree = "<group>"; };
-		9AAB47CE1B664F6800AEBF98 /* NSDictionary+Succeeded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Succeeded.m"; sourceTree = "<group>"; };
-		9AAB47CF1B664F6800AEBF98 /* DBSEHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSEHttpClient.h; sourceTree = "<group>"; };
-		9AAB47D01B664F6800AEBF98 /* DBSEHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSEHttpClient.m; sourceTree = "<group>"; };
-		9AAB47D21B664F6800AEBF98 /* DBHTTPClient+NewOperationMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBHTTPClient+NewOperationMethods.h"; sourceTree = "<group>"; };
-		9AAB47D31B664F6800AEBF98 /* DBHTTPClient+NewOperationMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBHTTPClient+NewOperationMethods.m"; sourceTree = "<group>"; };
-		9AAB47D41B664F6800AEBF98 /* DBHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHTTPClient.h; sourceTree = "<group>"; };
-		9AAB47D51B664F6800AEBF98 /* DBHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHTTPClient.m; sourceTree = "<group>"; };
 		9AAB47E21B664FEB00AEBF98 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		9AAB47E61B66506400AEBF98 /* DBSEUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSEUserCredentials.h; sourceTree = "<group>"; };
 		9AAB47E71B66506400AEBF98 /* DBSEUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSEUserCredentials.m; sourceTree = "<group>"; };
@@ -124,6 +143,11 @@
 		9AAB482C1B66642D00AEBF98 /* DBSETextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSETextField.h; sourceTree = "<group>"; };
 		9AAB482D1B66642D00AEBF98 /* DBSETextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSETextField.m; sourceTree = "<group>"; };
 		9AAB482F1B66652C00AEBF98 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9AAB48321B667A4000AEBF98 /* DBSEAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSEAlert.h; sourceTree = "<group>"; };
+		9AAB48331B667A4000AEBF98 /* DBSEAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSEAlert.m; sourceTree = "<group>"; };
+		9AAB483A1B6680D100AEBF98 /* DBSETimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSETimeLineViewController.h; path = DBSETimeLineViewController/DBSETimeLineViewController.h; sourceTree = "<group>"; };
+		9AAB483B1B6680D100AEBF98 /* DBSETimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSETimeLineViewController.m; path = DBSETimeLineViewController/DBSETimeLineViewController.m; sourceTree = "<group>"; };
+		A90971F745BC1609266C02F8 /* Pods-dbstandupemailTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dbstandupemailTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dbstandupemailTests/Pods-dbstandupemailTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD50F371CE827AAE06D41C18 /* Pods-dbstandupemail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dbstandupemail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dbstandupemail/Pods-dbstandupemail.debug.xcconfig"; sourceTree = "<group>"; };
 		E9751EBC824F4E09B2713671 /* libPods-dbstandupemail.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dbstandupemail.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23181ACA32E458690E482F3 /* Pods-dbstandupemail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dbstandupemail.release.xcconfig"; path = "Pods/Target Support Files/Pods-dbstandupemail/Pods-dbstandupemail.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,12 +166,96 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F602C806197CD838E22EEC /* libPods-dbstandupemailTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A376AFE1B66B84C006E764A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				9A376AFF1B66B8A2006E764A /* DBSETimelineTableView.h */,
+				9A376B001B66B8A2006E764A /* DBSETimelineTableView.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		9A376B061B66BBE2006E764A /* ShieldView */ = {
+			isa = PBXGroup;
+			children = (
+				9A376B071B66BC04006E764A /* DBSEShieldView.h */,
+				9A376B081B66BC04006E764A /* DBSEShieldView.m */,
+			);
+			name = ShieldView;
+			sourceTree = "<group>";
+		};
+		9A7484F11BAEFAB2001D00A5 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				9A7484F61BAEFB11001D00A5 /* Clients */,
+				9A7484F21BAEFAD2001D00A5 /* ContentManager */,
+			);
+			name = Architecture;
+			sourceTree = "<group>";
+		};
+		9A7484F21BAEFAD2001D00A5 /* ContentManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A7484F31BAEFAF6001D00A5 /* DBSEContentManager.h */,
+				9A7484F41BAEFAF6001D00A5 /* DBSEContentManager.m */,
+			);
+			name = ContentManager;
+			sourceTree = "<group>";
+		};
+		9A7484F61BAEFB11001D00A5 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				9A7484F71BAEFB11001D00A5 /* BaseClient */,
+				9A7484FC1BAEFB11001D00A5 /* DBHTTPClient */,
+				9A7484FD1BAEFB11001D00A5 /* Team */,
+			);
+			name = Clients;
+			path = Architecture/Clients;
+			sourceTree = "<group>";
+		};
+		9A7484F71BAEFB11001D00A5 /* BaseClient */ = {
+			isa = PBXGroup;
+			children = (
+				9A7484F81BAEFB11001D00A5 /* DBSEHttpClient.h */,
+				9A7484F91BAEFB11001D00A5 /* DBSEHttpClient.m */,
+				9A7484FA1BAEFB11001D00A5 /* NSDictionary+Succeeded.h */,
+				9A7484FB1BAEFB11001D00A5 /* NSDictionary+Succeeded.m */,
+			);
+			path = BaseClient;
+			sourceTree = "<group>";
+		};
+		9A7484FC1BAEFB11001D00A5 /* DBHTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DBHTTPClient;
+			sourceTree = "<group>";
+		};
+		9A7484FD1BAEFB11001D00A5 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				9A7484FE1BAEFB11001D00A5 /* DBSEHttpClient+Team.h */,
+				9A7484FF1BAEFB11001D00A5 /* DBSEHttpClient+Team.m */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		9A7485031BAF00A4001D00A5 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				9A7485041BAF00CD001D00A5 /* DBSESignInContentView.h */,
+				9A7485051BAF00CD001D00A5 /* DBSESignInContentView.m */,
+			);
+			name = ContentView;
+			sourceTree = "<group>";
+		};
 		9AAB47881B664D0A00AEBF98 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				9AAB482F1B66652C00AEBF98 /* Localizable.strings */,
+				9A8208421B7253F100419919 /* InfoPlist.strings */,
 				9AAB47A31B664D0A00AEBF98 /* LaunchScreen.xib */,
 				9AAB47951B664D0A00AEBF98 /* Info.plist */,
 				9AAB47961B664D0A00AEBF98 /* main.m */,
@@ -210,9 +319,9 @@
 		9AAB47BA1B664F6800AEBF98 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9A7484F11BAEFAB2001D00A5 /* Architecture */,
 				9AAB47BB1B664F6800AEBF98 /* AppDelegate */,
 				9AAB47BE1B664F6800AEBF98 /* Categories */,
-				9AAB47CB1B664F6800AEBF98 /* Clients */,
 				9AAB47E41B66506400AEBF98 /* Controllers */,
 				9AAB47EA1B66515C00AEBF98 /* Constant&Utilities */,
 				9AAB47D61B664F6800AEBF98 /* Models */,
@@ -273,41 +382,12 @@
 		9AAB47C81B664F6800AEBF98 /* String */ = {
 			isa = PBXGroup;
 			children = (
+				9A099B0D1BA8C3040021AEB4 /* NSString+Encryption.h */,
+				9A099B0E1BA8C3040021AEB4 /* NSString+Encryption.m */,
 				9AAB47C91B664F6800AEBF98 /* NSString+Localizable.h */,
 				9AAB47CA1B664F6800AEBF98 /* NSString+Localizable.m */,
 			);
 			path = String;
-			sourceTree = "<group>";
-		};
-		9AAB47CB1B664F6800AEBF98 /* Clients */ = {
-			isa = PBXGroup;
-			children = (
-				9AAB47CC1B664F6800AEBF98 /* BaseClient */,
-				9AAB47D11B664F6800AEBF98 /* DBHTTPClient */,
-			);
-			path = Clients;
-			sourceTree = "<group>";
-		};
-		9AAB47CC1B664F6800AEBF98 /* BaseClient */ = {
-			isa = PBXGroup;
-			children = (
-				9AAB47CD1B664F6800AEBF98 /* NSDictionary+Succeeded.h */,
-				9AAB47CE1B664F6800AEBF98 /* NSDictionary+Succeeded.m */,
-				9AAB47CF1B664F6800AEBF98 /* DBSEHttpClient.h */,
-				9AAB47D01B664F6800AEBF98 /* DBSEHttpClient.m */,
-			);
-			path = BaseClient;
-			sourceTree = "<group>";
-		};
-		9AAB47D11B664F6800AEBF98 /* DBHTTPClient */ = {
-			isa = PBXGroup;
-			children = (
-				9AAB47D21B664F6800AEBF98 /* DBHTTPClient+NewOperationMethods.h */,
-				9AAB47D31B664F6800AEBF98 /* DBHTTPClient+NewOperationMethods.m */,
-				9AAB47D41B664F6800AEBF98 /* DBHTTPClient.h */,
-				9AAB47D51B664F6800AEBF98 /* DBHTTPClient.m */,
-			);
-			path = DBHTTPClient;
 			sourceTree = "<group>";
 		};
 		9AAB47D61B664F6800AEBF98 /* Models */ = {
@@ -320,8 +400,9 @@
 		9AAB47D71B664F6800AEBF98 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9AAB48241B66611C00AEBF98 /* BaseViewController */,
 				9AAB48231B6660EC00AEBF98 /* SignIn */,
+				9AAB48391B6680A400AEBF98 /* TimeLine */,
+				9AAB48241B66611C00AEBF98 /* BaseViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -338,6 +419,7 @@
 		9AAB47E41B66506400AEBF98 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9AAB48311B667A4000AEBF98 /* Alert */,
 				9AAB47E51B66506400AEBF98 /* Credentials */,
 			);
 			path = Controllers;
@@ -355,6 +437,7 @@
 		9AAB47EA1B66515C00AEBF98 /* Constant&Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9A376B061B66BBE2006E764A /* ShieldView */,
 				9AAB481F1B665C6B00AEBF98 /* Constants */,
 				9AAB47EB1B66515C00AEBF98 /* Log */,
 			);
@@ -429,6 +512,7 @@
 			children = (
 				9AAB48281B66617900AEBF98 /* DBSESignInViewController.h */,
 				9AAB48291B66617900AEBF98 /* DBSESignInViewController.m */,
+				9A7485031BAF00A4001D00A5 /* ContentView */,
 				9AAB482B1B66642D00AEBF98 /* TextField */,
 			);
 			name = SignIn;
@@ -453,10 +537,30 @@
 			path = DBSESignInViewController/TextField;
 			sourceTree = "<group>";
 		};
+		9AAB48311B667A4000AEBF98 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB48321B667A4000AEBF98 /* DBSEAlert.h */,
+				9AAB48331B667A4000AEBF98 /* DBSEAlert.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		9AAB48391B6680A400AEBF98 /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB483A1B6680D100AEBF98 /* DBSETimeLineViewController.h */,
+				9AAB483B1B6680D100AEBF98 /* DBSETimeLineViewController.m */,
+				9A376AFE1B66B84C006E764A /* TableView */,
+			);
+			name = TimeLine;
+			sourceTree = "<group>";
+		};
 		BFD06007D1E3956B44071E8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				E9751EBC824F4E09B2713671 /* libPods-dbstandupemail.a */,
+				8FD8C77B1C92936EF72C4BAF /* libPods-dbstandupemailTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -466,6 +570,8 @@
 			children = (
 				AD50F371CE827AAE06D41C18 /* Pods-dbstandupemail.debug.xcconfig */,
 				F23181ACA32E458690E482F3 /* Pods-dbstandupemail.release.xcconfig */,
+				A90971F745BC1609266C02F8 /* Pods-dbstandupemailTests.debug.xcconfig */,
+				789A2EF785146258EDBBD69B /* Pods-dbstandupemailTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -496,9 +602,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AAB47B71B664D0A00AEBF98 /* Build configuration list for PBXNativeTarget "dbstandupemailTests" */;
 			buildPhases = (
+				4D900B6C9923EACBCCBADE0B /* Check Pods Manifest.lock */,
 				9AAB47A61B664D0A00AEBF98 /* Sources */,
 				9AAB47A71B664D0A00AEBF98 /* Frameworks */,
 				9AAB47A81B664D0A00AEBF98 /* Resources */,
+				AEF340B094F9985ABEB0C206 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -516,7 +624,7 @@
 		9AAB47891B664D0A00AEBF98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Daniele Bogo";
 				TargetAttributes = {
 					9AAB47901B664D0A00AEBF98 = {
@@ -564,6 +672,7 @@
 				9AAB48111B6657D500AEBF98 /* RobotoCondensed-Light.ttf in Resources */,
 				9AAB48301B66652C00AEBF98 /* Localizable.strings in Resources */,
 				9AAB480A1B6657D500AEBF98 /* Roboto-MediumItalic.ttf in Resources */,
+				9A8208431B7253F100419919 /* InfoPlist.strings in Resources */,
 				9AAB48031B6657D500AEBF98 /* Roboto-BlackItalic.ttf in Resources */,
 				9AAB47E31B664FEB00AEBF98 /* Images.xcassets in Resources */,
 				9AAB48061B6657D500AEBF98 /* Roboto-Italic.ttf in Resources */,
@@ -601,6 +710,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dbstandupemail/Pods-dbstandupemail-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4D900B6C9923EACBCCBADE0B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEF340B094F9985ABEB0C206 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dbstandupemailTests/Pods-dbstandupemailTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E9B6029D8689D5C87EB120E4 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -623,24 +762,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A376B011B66B8A2006E764A /* DBSETimelineTableView.m in Sources */,
+				9A099B0F1BA8C3040021AEB4 /* NSString+Encryption.m in Sources */,
 				9AAB481D1B66585300AEBF98 /* UIColor+DBSEColors.m in Sources */,
 				9AAB47DA1B664F6800AEBF98 /* NSObject+ModelMapping.m in Sources */,
 				9AAB481C1B66585300AEBF98 /* UIColor+Hex.m in Sources */,
 				9AAB481E1B66585300AEBF98 /* UIFont+DBSEFonts.m in Sources */,
+				9A7485061BAF00CD001D00A5 /* DBSESignInContentView.m in Sources */,
 				9AAB47DB1B664F6800AEBF98 /* NSObject+ObjectValidation.m in Sources */,
 				9AAB47E81B66506400AEBF98 /* DBSEUserCredentials.m in Sources */,
-				9AAB47DD1B664F6800AEBF98 /* NSDictionary+Succeeded.m in Sources */,
+				9A7484F51BAEFAF6001D00A5 /* DBSEContentManager.m in Sources */,
 				9AAB482A1B66617900AEBF98 /* DBSESignInViewController.m in Sources */,
-				9AAB47DE1B664F6800AEBF98 /* DBSEHttpClient.m in Sources */,
+				9A7485011BAEFB11001D00A5 /* NSDictionary+Succeeded.m in Sources */,
+				9A7485001BAEFB11001D00A5 /* DBSEHttpClient.m in Sources */,
 				9AAB47DC1B664F6800AEBF98 /* NSString+Localizable.m in Sources */,
-				9AAB47DF1B664F6800AEBF98 /* DBHTTPClient+NewOperationMethods.m in Sources */,
+				9AAB48341B667A4000AEBF98 /* DBSEAlert.m in Sources */,
+				9A376B091B66BC04006E764A /* DBSEShieldView.m in Sources */,
 				9AAB47971B664D0A00AEBF98 /* main.m in Sources */,
 				9AAB47D91B664F6800AEBF98 /* UITableViewCell+Identifier.m in Sources */,
 				9AAB482E1B66642D00AEBF98 /* DBSETextField.m in Sources */,
 				9AAB48271B66613800AEBF98 /* DBSEViewController.m in Sources */,
-				9AAB47E01B664F6800AEBF98 /* DBHTTPClient.m in Sources */,
 				9AAB48221B665DAF00AEBF98 /* DBSEConstants.m in Sources */,
+				9A7485021BAEFB11001D00A5 /* DBSEHttpClient+Team.m in Sources */,
 				9AAB47D81B664F6800AEBF98 /* AppDelegate.m in Sources */,
+				9AAB483C1B6680D100AEBF98 /* DBSETimeLineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +840,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -761,8 +907,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = dbstandupemail/DBSEPrefix.pch;
 				INFOPLIST_FILE = dbstandupemail/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bogodaniele.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -774,14 +921,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = dbstandupemail/DBSEPrefix.pch;
 				INFOPLIST_FILE = dbstandupemail/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bogodaniele.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		9AAB47B81B664D0A00AEBF98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A90971F745BC1609266C02F8 /* Pods-dbstandupemailTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -794,6 +943,7 @@
 				);
 				INFOPLIST_FILE = dbstandupemailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bogodaniele.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dbstandupemail.app/dbstandupemail";
 			};
@@ -801,6 +951,7 @@
 		};
 		9AAB47B91B664D0A00AEBF98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 789A2EF785146258EDBBD69B /* Pods-dbstandupemailTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -809,6 +960,7 @@
 				);
 				INFOPLIST_FILE = dbstandupemailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bogodaniele.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dbstandupemail.app/dbstandupemail";
 			};

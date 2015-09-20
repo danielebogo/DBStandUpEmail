@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "DBSESignInViewController.h"
+#import "DBSETimeLineViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -79,15 +81,14 @@
     }
     
     UINavigationController *navigationController = [UINavigationController new];
+    navigationController.navigationBarHidden = YES;
     
     if (!credentials.isLoggedIn) {
         DBSESignInViewController *signinViewController = [DBSESignInViewController new];
         navigationController.viewControllers = @[signinViewController];
-        navigationController.navigationBarHidden = YES;
     } else {
-//        TPSGProfileViewController *profileViewController = [TPSGProfileViewController new];
-//        profileViewController.user = [credentials userFromCredentials];
-//        navigationController.viewControllers = @[profileViewController];
+        DBSETimeLineViewController *timelineViewController = [DBSETimeLineViewController new];
+        navigationController.viewControllers = @[timelineViewController];
     }
     
     return navigationController;

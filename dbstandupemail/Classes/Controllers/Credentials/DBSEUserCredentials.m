@@ -51,15 +51,15 @@ NSString *const kDBSEKeychainServiceName = @"kDBSEKeychainServiceName";
     OSStatus err = SecItemCopyMatching((__bridge CFDictionaryRef) query, &result);
     
     if (err == noErr && result) {
-        NSString *email = [(__bridge NSDictionary *)result objectForKey:(__bridge id) kSecAttrAccount];
+        NSString *authId = [(__bridge NSDictionary *)result objectForKey:(__bridge id) kSecAttrAccount];
         NSData *data = [(__bridge NSDictionary *)result objectForKey:(__bridge id) kSecAttrGeneric];
         NSString *token = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
-        if (email && token) {
-            self.userEmail = email;
-            self.userToken = token;
+        if (authId && token) {
+            self.userAuthId = authId;
+            self.userAuthToken = token;
 
-            DLog(@"User credentials %@ - %@", self.userEmail, self.userToken);
+            DLog(@"User credentials %@ - %@", self.userAuthId, self.userAuthToken);
         }
     }
 }
@@ -72,13 +72,13 @@ NSString *const kDBSEKeychainServiceName = @"kDBSEKeychainServiceName";
         [query setObject:kDBSEKeychainServiceName forKey:(__bridge id) kSecAttrService];
 
         OSStatus err = SecItemDelete((__bridge CFDictionaryRef) query);
-        if (self.userEmail && self.userToken && (err == noErr || err == errSecItemNotFound)) {
+        if (self.userAuthId && self.userAuthToken && (err == noErr || err == errSecItemNotFound)) {
             [query removeAllObjects];
 
             [query setObject:(__bridge id) kSecClassGenericPassword forKey:(__bridge id) kSecClass];
             [query setObject:kDBSEKeychainServiceName forKey:(__bridge id) kSecAttrService];
-            [query setObject:self.userEmail forKey:(__bridge id) kSecAttrAccount];
-            [query setObject:[self.userToken dataUsingEncoding:NSUTF8StringEncoding] forKey:(__bridge id) kSecAttrGeneric];
+            [query setObject:self.userAuthId forKey:(__bridge id) kSecAttrAccount];
+            [query setObject:[self.userAuthToken dataUsingEncoding:NSUTF8StringEncoding] forKey:(__bridge id) kSecAttrGeneric];
 
             SecItemAdd((__bridge CFDictionaryRef) query, NULL);
         }
@@ -86,14 +86,14 @@ NSString *const kDBSEKeychainServiceName = @"kDBSEKeychainServiceName";
 
 - (void)logout
 {
-    self.userEmail = nil;
-    self.userToken = nil;
+    self.userAuthId = nil;
+    self.userAuthToken = nil;
     [self saveCredentials];
 }
 
 - (BOOL)isLoggedIn
 {
-    return [self.userEmail isValidString] && [self.userToken isValidString];
+    return [self.userAuthId isValidString] && [self.userAuthToken isValidString];
 }
 
 //- (TPSGUser *)userFromCredentials

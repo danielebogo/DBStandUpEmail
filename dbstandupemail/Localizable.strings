@@ -6,5 +6,14 @@
   Copyright (c) 2015 Daniele Bogo. All rights reserved.
 */
 
-"signup_placeholder_email" = "email";
-"signup_placeholder_password" = "password";
+//Alert
+"alert_attention" = "Attention";
+"alert_empty_field" = "%@ mandatory field";
+
+"signup_placeholder_token" = "token";
+"signup_placeholder_auth_id" = "auth id";
+
+"signin_title" = "Log in to your account.";
+"signin_button_title" = "Sign In";
+
+"logout_button_title" = "Logout";

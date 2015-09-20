@@ -8,11 +8,13 @@
 
 #import "DBSEViewController.h"
 
+
 @interface DBSEViewController ()
 
 @end
 
 @implementation DBSEViewController
+@synthesize shieldView = _shieldView;
 
 - (void)viewDidLoad
 {
@@ -36,6 +38,15 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleDefault;
+}
+
+- (DBSEShieldView *)shieldView
+{
+    if (!_shieldView) {
+        _shieldView = [DBSEShieldView new];
+    }
+    
+    return _shieldView;
 }
 
 @end

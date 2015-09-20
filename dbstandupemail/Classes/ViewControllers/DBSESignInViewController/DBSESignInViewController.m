@@ -7,10 +7,13 @@
 //
 
 #import "DBSESignInViewController.h"
-#import "DBSETextField.h"
+#import "DBSESignInContentView.h"
+#import "DBSEAlert.h"
+
+#import "DBSEContentManager.h"
 
 
-#import <PureLayout/PureLayout.h>
+#import <Masonry/Masonry.h>
 
 
 @interface DBSESignInViewController ()
@@ -18,14 +21,16 @@
 @end
 
 @implementation DBSESignInViewController {
-    UIImageView *logoImageView_;
-    DBSETextField *emailField_, *passwordField_, *usedTextField_;
+    DBSEContentManager *contentManager_;
+    DBSESignInContentView *contentView_;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    contentManager_ = [DBSEContentManager new];
     
     [self dbse_buildUI];
     [self dbse_addConstraints];
@@ -36,60 +41,65 @@
 
 - (void)dbse_buildUI
 {
-    logoImageView_ = [UIImageView newAutoLayoutView];
-    logoImageView_.image = [UIImage imageNamed:@"LogoSmall"];
-    [self.view addSubview:logoImageView_];
-    
     __weak typeof(self)weakSelf = self;
     
-    void (^textfieldShouldChangeText)(DBSETextField *inputText, NSString *newText) = ^(DBSETextField *inputText, NSString *newText) {
-//        __strong typeof(weakSelf)strongSelf = weakSelf;
-//        strongSelf->fields_[@(inputText.fieldType)] = [newText isValidString] ? newText : @"";
+    contentView_ = [DBSESignInContentView new];
+    contentView_.didSelectSigniInButton = ^{
+        [weakSelf dbse_goAhead];
     };
-    
-    void(^textfieldDidBeginEditing)(DBSETextField *inputText) = ^(DBSETextField *inputText) {
-        __strong typeof(weakSelf)strongSelf = weakSelf;
-        strongSelf->usedTextField_ = inputText;
-    };
-    
-    emailField_ = [[DBSETextField alloc] initWithType:TPSGFieldsTypeEmail];
-    emailField_.returnKeyType = UIReturnKeyNext;
-    emailField_.keyboardType = UIKeyboardTypeEmailAddress;
-    emailField_.fieldType = TPSGFieldsTypeEmail;
-    emailField_.textfieldDidBeginEditing = textfieldDidBeginEditing;
-    emailField_.textfieldShouldReturn = ^(DBSETextField *inputText) {
-        __strong typeof(weakSelf)strongSelf = weakSelf;
-        [strongSelf->passwordField_.textField becomeFirstResponder];
-    };
-    emailField_.textfieldShouldChangeText = textfieldShouldChangeText;
-    [self.view addSubview:emailField_];
-    
-    passwordField_ = [[DBSETextField alloc] initWithType:TPSGFieldsTypePassword];
-    passwordField_.fieldType = TPSGFieldsTypePassword;
-    passwordField_.secureTextEntry = YES;
-    passwordField_.returnKeyType = UIReturnKeyDone;
-    passwordField_.textfieldDidBeginEditing = textfieldDidBeginEditing;
-    passwordField_.textfieldShouldReturn = ^(DBSETextField *inputText) {
-
-    };
-    passwordField_.textfieldShouldChangeText = textfieldShouldChangeText;
-    [self.view addSubview:passwordField_];
+    [self.view addSubview:contentView_];
 }
 
 - (void)dbse_addConstraints
 {
-    [logoImageView_ autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [logoImageView_ autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view withOffset:50.0f];
+    __weak typeof(self)weakSelf = self;
     
-    [emailField_ autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:logoImageView_ withOffset:50.0f];
-    [emailField_ autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view withOffset:20.0f];
-    [emailField_ autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-20.0f];
-    [emailField_ autoSetDimension:ALDimensionHeight toSize:40.0f];
+    [contentView_ mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(weakSelf.view);
+    }];
+}
+
+- (void)dbse_goAhead
+{
+    [contentView_.usedTextField.textField resignFirstResponder];
+
+    NSString *token = contentView_.fields[@(TPSGFieldsTypeAuthToken)];
+    NSString *authId = contentView_.fields[@(TPSGFieldsTypeAuthId)];
     
-    [passwordField_ autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:emailField_ withOffset:20.0f];
-    [passwordField_ autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view withOffset:20.0f];
-    [passwordField_ autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-20.0f];
-    [passwordField_ autoSetDimension:ALDimensionHeight toSize:40.0f];
+    if (![token isValidString] || ![authId isValidString]) {
+        NSString *field = [DBSETextField placeholderForType:![token isValidString] ? TPSGFieldsTypeAuthToken : TPSGFieldsTypeAuthId];
+        [DBSEAlert alertForEvent:DBSEAlertEventEmptyField field:field];
+        return;
+    }
+    
+    [DBSEUserCredentials sharedInstance].userAuthToken = token;
+    [DBSEUserCredentials sharedInstance].userAuthId = authId;
+    
+    //Call end point
+    DLog(@"Fields %@", contentView_.fields);
+
+    __weak typeof(self)weakSelf = self;
+    
+    [self.shieldView beginShieldingView:self.view];
+    
+    [contentManager_ findTeamsWithSuccessBlock:^(NSURLSessionDataTask *task, id responseObject) {
+        DLog(@"TEAM: %@", responseObject);
+        
+        [weakSelf.shieldView endShieldingView];
+        
+        if ([task.response dbse_responseSucceded]) {
+            
+//            [[DBSEUserCredentials sharedInstance] saveCredentials];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:kDBSEUpdateRootViewController object:nil];
+            });
+        }
+    } failureBlock:^(NSURLSessionDataTask *task, NSError *error) {
+        [weakSelf.shieldView endShieldingView];
+        
+        DLog(@"TEAM ERROR: %@", error);
+    }];
 }
 
 @end

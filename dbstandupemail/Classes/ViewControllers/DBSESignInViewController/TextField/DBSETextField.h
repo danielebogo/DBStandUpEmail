@@ -9,8 +9,8 @@
 @import UIKit;
 
 typedef NS_ENUM(NSUInteger, DBSEFieldsType) {
-    TPSGFieldsTypeEmail,
-    TPSGFieldsTypePassword,
+    TPSGFieldsTypeAuthToken,
+    TPSGFieldsTypeAuthId,
     TPSGFieldsTypeNone
 };
 
