@@ -9,7 +9,6 @@
 #import "DBSETimelineTableViewCell.h"
 
 #import "UIColor+Hex.h"
-#import "UIFont+DBSEFonts.h"
 
 #import <Masonry/Masonry.h>
 
@@ -77,6 +76,7 @@
     userNameLabel_ = [UILabel new];
     userNameLabel_.numberOfLines = 1;
     userNameLabel_.font = [UIFont dbse_fontTypeRegular];
+    userNameLabel_.textColor = [UIColor dbse_darkGrey];
     [self.contentView addSubview:userNameLabel_];
 }
 

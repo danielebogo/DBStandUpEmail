@@ -27,4 +27,8 @@ typedef NS_ENUM(NSUInteger, DBSETimeLineCellType) {
 - (NSString *)userNameAtIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)userMessageAtIndexPath:(NSIndexPath *)indexPath;
 
+- (UIFont *)userMessageFontAtIndexPath:(NSIndexPath *)indexPath;
+
+- (NSString *)dateForSection:(NSUInteger)section;
+
 @end

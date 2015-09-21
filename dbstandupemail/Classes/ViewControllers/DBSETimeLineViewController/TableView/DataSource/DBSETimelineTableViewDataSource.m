@@ -124,6 +124,11 @@ static DBSETimeLineCellType DBSETimeLineCellTypeFromString(NSString *string)
 
 #pragma mark - Public methods
 
+- (NSString *)dateForSection:(NSUInteger)section
+{
+    return _digests[section][kDBSEDateKey];
+}
+
 - (DBSETimeLineCellType)cellTypeAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *cellData = [self dbse_cellDataAtIndexPath:indexPath];
@@ -140,6 +145,12 @@ static DBSETimeLineCellType DBSETimeLineCellTypeFromString(NSString *string)
 {
     NSDictionary *cellData = [self dbse_cellDataAtIndexPath:indexPath];
     return cellData[kDBSEUserMessageKey];
+}
+
+- (UIFont *)userMessageFontAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *iconName = [self bsu_messageIconForIndexPath:indexPath];
+    return [iconName isValidString] ? [UIFont dbse_fontTypeThin] : [UIFont dbse_fontTypeThinItalic];
 }
 
 

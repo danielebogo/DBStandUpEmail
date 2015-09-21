@@ -14,7 +14,7 @@
 
 + (instancetype)tableView
 {
-    return [[self alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    return [[self alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
 }
 
 
