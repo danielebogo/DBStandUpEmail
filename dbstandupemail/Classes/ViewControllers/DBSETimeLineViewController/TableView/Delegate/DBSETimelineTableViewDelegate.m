@@ -32,6 +32,8 @@ static const CGFloat kDBSECellHeight = 50.0;
 }
 
 
+#pragma mark - Private methods
+
 - (CGFloat)dbse_tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DBSETimelineTableViewDataSource *datasource = (DBSETimelineTableViewDataSource *)tableView.dataSource;
