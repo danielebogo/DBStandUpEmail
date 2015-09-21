@@ -16,7 +16,7 @@
 {
     static UIColor *color = nil;
     if (color == nil) {
-        color = [UIColor tpsg_colorWithHexValue:0x232a2b andAlpha:1.0];
+        color = [UIColor dbse_colorWithHexValue:0x232a2b andAlpha:1.0];
     }
     return color;
 }
@@ -25,7 +25,7 @@
 {
     static UIColor *color = nil;
     if (color == nil) {
-        color = [UIColor tpsg_colorWithHexValue:0x84878a andAlpha:1.0];
+        color = [UIColor dbse_colorWithHexValue:0x84878a andAlpha:1.0];
     }
     return color;
 }
@@ -34,7 +34,7 @@
 {
     static UIColor *color = nil;
     if (color == nil) {
-        color = [UIColor tpsg_colorWithHexValue:0x2c83c9 andAlpha:1.0];
+        color = [UIColor dbse_colorWithHexValue:0x2c83c9 andAlpha:1.0];
     }
     return color;
 }
@@ -43,7 +43,7 @@
 {
     static UIColor *color = nil;
     if (color == nil) {
-        color = [UIColor tpsg_colorWithHexValue:0xf0f4f7 andAlpha:1.0];
+        color = [UIColor dbse_colorWithHexValue:0xf0f4f7 andAlpha:1.0];
     }
     return color;
 }

@@ -10,7 +10,7 @@
 
 @implementation UIColor (Hex)
 
-+ (UIColor*)tpsg_colorWithHexValue:(uint)hexValue andAlpha:(float)alpha
++ (UIColor*)dbse_colorWithHexValue:(uint)hexValue andAlpha:(float)alpha
 {
     return [UIColor
             colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0
@@ -19,13 +19,13 @@
             alpha:alpha];
 }
 
-+ (UIColor*)tpsg_colorWithHexString:(NSString*)hexString andAlpha:(float)alpha {
++ (UIColor*)dbse_colorWithHexString:(NSString*)hexString andAlpha:(float)alpha {
     UIColor *col;
     hexString = [hexString stringByReplacingOccurrencesOfString:@"#"
                                                      withString:@"0x"];
     uint hexValue;
     if ([[NSScanner scannerWithString:hexString] scanHexInt:&hexValue]) {
-        col = [self tpsg_colorWithHexValue:hexValue andAlpha:alpha];
+        col = [self dbse_colorWithHexValue:hexValue andAlpha:alpha];
     } else {
         // invalid hex string
         col = [self blackColor];

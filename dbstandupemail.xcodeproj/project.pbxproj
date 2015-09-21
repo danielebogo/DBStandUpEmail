@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8AC8D8B48E600450990DED7E /* libPods-dbstandupemail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9751EBC824F4E09B2713671 /* libPods-dbstandupemail.a */; };
+		9A0048981BB0A3CC00335D01 /* DBSETimelineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0048971BB0A3CC00335D01 /* DBSETimelineTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		9A00489C1BB0A63B00335D01 /* DBSETimelineTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00489B1BB0A63B00335D01 /* DBSETimelineTableViewDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		9A099B0F1BA8C3040021AEB4 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A099B0E1BA8C3040021AEB4 /* NSString+Encryption.m */; };
 		9A376B011B66B8A2006E764A /* DBSETimelineTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A376B001B66B8A2006E764A /* DBSETimelineTableView.m */; };
 		9A376B091B66BC04006E764A /* DBSEShieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A376B081B66BC04006E764A /* DBSEShieldView.m */; };
@@ -16,7 +18,17 @@
 		9A7485011BAEFB11001D00A5 /* NSDictionary+Succeeded.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7484FB1BAEFB11001D00A5 /* NSDictionary+Succeeded.m */; settings = {ASSET_TAGS = (); }; };
 		9A7485021BAEFB11001D00A5 /* DBSEHttpClient+Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7484FF1BAEFB11001D00A5 /* DBSEHttpClient+Team.m */; settings = {ASSET_TAGS = (); }; };
 		9A7485061BAF00CD001D00A5 /* DBSESignInContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485051BAF00CD001D00A5 /* DBSESignInContentView.m */; settings = {ASSET_TAGS = (); }; };
+		9A74850E1BAF175F001D00A5 /* dbstandupemail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A74850C1BAF175F001D00A5 /* dbstandupemail.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		9A7485181BAF1A1A001D00A5 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485111BAF1A1A001D00A5 /* Team.m */; settings = {ASSET_TAGS = (); }; };
+		9A7485191BAF1A1A001D00A5 /* Team+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485131BAF1A1A001D00A5 /* Team+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		9A74851A1BAF1A1A001D00A5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485151BAF1A1A001D00A5 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		9A74851B1BAF1A1A001D00A5 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485171BAF1A1A001D00A5 /* User+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		9A74851F1BAF2062001D00A5 /* DBSEDataAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A74851E1BAF2062001D00A5 /* DBSEDataAccessObject.m */; settings = {ASSET_TAGS = (); }; };
+		9A7485221BAF207E001D00A5 /* DBSEDataAccessObject+Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485211BAF207E001D00A5 /* DBSEDataAccessObject+Team.m */; settings = {ASSET_TAGS = (); }; };
+		9A7485261BAF49CC001D00A5 /* DBSEHttpClient+Digests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485251BAF49CC001D00A5 /* DBSEHttpClient+Digests.m */; settings = {ASSET_TAGS = (); }; };
+		9A74852A1BAF4B5F001D00A5 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7485291BAF4B5F001D00A5 /* NSDate+Utilities.m */; settings = {ASSET_TAGS = (); }; };
 		9A8208431B7253F100419919 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8208421B7253F100419919 /* InfoPlist.strings */; };
+		9AA529541BB0923B00AF7EB9 /* DBSETimelineTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA529531BB0923B00AF7EB9 /* DBSETimelineTableViewDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		9AAB47971B664D0A00AEBF98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47961B664D0A00AEBF98 /* main.m */; };
 		9AAB47A51B664D0A00AEBF98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AAB47A31B664D0A00AEBF98 /* LaunchScreen.xib */; };
 		9AAB47B11B664D0A00AEBF98 /* dbstandupemailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB47B01B664D0A00AEBF98 /* dbstandupemailTests.m */; };
@@ -71,6 +83,10 @@
 /* Begin PBXFileReference section */
 		789A2EF785146258EDBBD69B /* Pods-dbstandupemailTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dbstandupemailTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dbstandupemailTests/Pods-dbstandupemailTests.release.xcconfig"; sourceTree = "<group>"; };
 		8FD8C77B1C92936EF72C4BAF /* libPods-dbstandupemailTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dbstandupemailTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A0048961BB0A3CC00335D01 /* DBSETimelineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSETimelineTableViewCell.h; path = DBSETimeLineViewController/Cell/DBSETimelineTableViewCell.h; sourceTree = "<group>"; };
+		9A0048971BB0A3CC00335D01 /* DBSETimelineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSETimelineTableViewCell.m; path = DBSETimeLineViewController/Cell/DBSETimelineTableViewCell.m; sourceTree = "<group>"; };
+		9A00489A1BB0A63B00335D01 /* DBSETimelineTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSETimelineTableViewDelegate.h; path = DBSETimeLineViewController/TableView/Delegate/DBSETimelineTableViewDelegate.h; sourceTree = "<group>"; };
+		9A00489B1BB0A63B00335D01 /* DBSETimelineTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSETimelineTableViewDelegate.m; path = DBSETimeLineViewController/TableView/Delegate/DBSETimelineTableViewDelegate.m; sourceTree = "<group>"; };
 		9A099B0D1BA8C3040021AEB4 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
 		9A099B0E1BA8C3040021AEB4 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
 		9A376AFF1B66B8A2006E764A /* DBSETimelineTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSETimelineTableView.h; path = DBSETimeLineViewController/TableView/DBSETimelineTableView.h; sourceTree = "<group>"; };
@@ -87,7 +103,26 @@
 		9A7484FF1BAEFB11001D00A5 /* DBSEHttpClient+Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBSEHttpClient+Team.m"; sourceTree = "<group>"; };
 		9A7485041BAF00CD001D00A5 /* DBSESignInContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSESignInContentView.h; path = DBSESignInViewController/ContentView/DBSESignInContentView.h; sourceTree = "<group>"; };
 		9A7485051BAF00CD001D00A5 /* DBSESignInContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSESignInContentView.m; path = DBSESignInViewController/ContentView/DBSESignInContentView.m; sourceTree = "<group>"; };
+		9A74850D1BAF175F001D00A5 /* dbstandupemail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dbstandupemail.xcdatamodel; sourceTree = "<group>"; };
+		9A7485101BAF1A1A001D00A5 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Team.h; path = Architecture/DTO/Team.h; sourceTree = "<group>"; };
+		9A7485111BAF1A1A001D00A5 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Team.m; path = Architecture/DTO/Team.m; sourceTree = "<group>"; };
+		9A7485121BAF1A1A001D00A5 /* Team+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Team+CoreDataProperties.h"; path = "Architecture/DTO/Team+CoreDataProperties.h"; sourceTree = "<group>"; };
+		9A7485131BAF1A1A001D00A5 /* Team+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Team+CoreDataProperties.m"; path = "Architecture/DTO/Team+CoreDataProperties.m"; sourceTree = "<group>"; };
+		9A7485141BAF1A1A001D00A5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Architecture/DTO/User.h; sourceTree = "<group>"; };
+		9A7485151BAF1A1A001D00A5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Architecture/DTO/User.m; sourceTree = "<group>"; };
+		9A7485161BAF1A1A001D00A5 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "Architecture/DTO/User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		9A7485171BAF1A1A001D00A5 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "Architecture/DTO/User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		9A74851D1BAF2062001D00A5 /* DBSEDataAccessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSEDataAccessObject.h; path = Architecture/DAO/DBSEDataAccessObject.h; sourceTree = "<group>"; };
+		9A74851E1BAF2062001D00A5 /* DBSEDataAccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSEDataAccessObject.m; path = Architecture/DAO/DBSEDataAccessObject.m; sourceTree = "<group>"; };
+		9A7485201BAF207E001D00A5 /* DBSEDataAccessObject+Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DBSEDataAccessObject+Team.h"; path = "Architecture/DAO/DBSEDataAccessObject+Team.h"; sourceTree = "<group>"; };
+		9A7485211BAF207E001D00A5 /* DBSEDataAccessObject+Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DBSEDataAccessObject+Team.m"; path = "Architecture/DAO/DBSEDataAccessObject+Team.m"; sourceTree = "<group>"; };
+		9A7485241BAF49CC001D00A5 /* DBSEHttpClient+Digests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DBSEHttpClient+Digests.h"; path = "Digests/DBSEHttpClient+Digests.h"; sourceTree = "<group>"; };
+		9A7485251BAF49CC001D00A5 /* DBSEHttpClient+Digests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DBSEHttpClient+Digests.m"; path = "Digests/DBSEHttpClient+Digests.m"; sourceTree = "<group>"; };
+		9A7485281BAF4B5F001D00A5 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		9A7485291BAF4B5F001D00A5 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		9A8208421B7253F100419919 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		9AA529521BB0923B00AF7EB9 /* DBSETimelineTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSETimelineTableViewDataSource.h; path = DBSETimeLineViewController/TableView/DataSource/DBSETimelineTableViewDataSource.h; sourceTree = "<group>"; };
+		9AA529531BB0923B00AF7EB9 /* DBSETimelineTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSETimelineTableViewDataSource.m; path = DBSETimeLineViewController/TableView/DataSource/DBSETimelineTableViewDataSource.m; sourceTree = "<group>"; };
 		9AAB47911B664D0A00AEBF98 /* dbstandupemail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dbstandupemail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAB47951B664D0A00AEBF98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AAB47961B664D0A00AEBF98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -173,11 +208,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A0048951BB0A3AD00335D01 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9A0048961BB0A3CC00335D01 /* DBSETimelineTableViewCell.h */,
+				9A0048971BB0A3CC00335D01 /* DBSETimelineTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		9A0048991BB0A61900335D01 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9A00489A1BB0A63B00335D01 /* DBSETimelineTableViewDelegate.h */,
+				9A00489B1BB0A63B00335D01 /* DBSETimelineTableViewDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
 		9A376AFE1B66B84C006E764A /* TableView */ = {
 			isa = PBXGroup;
 			children = (
 				9A376AFF1B66B8A2006E764A /* DBSETimelineTableView.h */,
 				9A376B001B66B8A2006E764A /* DBSETimelineTableView.m */,
+				9A0048951BB0A3AD00335D01 /* Cell */,
+				9A0048991BB0A61900335D01 /* Delegate */,
+				9AA529511BB0921300AF7EB9 /* DataSource */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -191,13 +247,16 @@
 			name = ShieldView;
 			sourceTree = "<group>";
 		};
-		9A7484F11BAEFAB2001D00A5 /* Architecture */ = {
+		9A7484F11BAEFAB2001D00A5 /* Content Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				9A74851C1BAF2042001D00A5 /* DAO */,
+				9A74850F1BAF19C6001D00A5 /* DTO */,
+				9A74850B1BAF1737001D00A5 /* DTM */,
 				9A7484F61BAEFB11001D00A5 /* Clients */,
 				9A7484F21BAEFAD2001D00A5 /* ContentManager */,
 			);
-			name = Architecture;
+			name = "Content Architecture";
 			sourceTree = "<group>";
 		};
 		9A7484F21BAEFAD2001D00A5 /* ContentManager */ = {
@@ -214,6 +273,7 @@
 			children = (
 				9A7484F71BAEFB11001D00A5 /* BaseClient */,
 				9A7484FC1BAEFB11001D00A5 /* DBHTTPClient */,
+				9A7485231BAF49A3001D00A5 /* Digest */,
 				9A7484FD1BAEFB11001D00A5 /* Team */,
 			);
 			name = Clients;
@@ -254,6 +314,67 @@
 				9A7485051BAF00CD001D00A5 /* DBSESignInContentView.m */,
 			);
 			name = ContentView;
+			sourceTree = "<group>";
+		};
+		9A74850B1BAF1737001D00A5 /* DTM */ = {
+			isa = PBXGroup;
+			children = (
+				9A74850C1BAF175F001D00A5 /* dbstandupemail.xcdatamodeld */,
+			);
+			name = DTM;
+			sourceTree = "<group>";
+		};
+		9A74850F1BAF19C6001D00A5 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				9A7485101BAF1A1A001D00A5 /* Team.h */,
+				9A7485111BAF1A1A001D00A5 /* Team.m */,
+				9A7485121BAF1A1A001D00A5 /* Team+CoreDataProperties.h */,
+				9A7485131BAF1A1A001D00A5 /* Team+CoreDataProperties.m */,
+				9A7485141BAF1A1A001D00A5 /* User.h */,
+				9A7485151BAF1A1A001D00A5 /* User.m */,
+				9A7485161BAF1A1A001D00A5 /* User+CoreDataProperties.h */,
+				9A7485171BAF1A1A001D00A5 /* User+CoreDataProperties.m */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+		9A74851C1BAF2042001D00A5 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				9A74851D1BAF2062001D00A5 /* DBSEDataAccessObject.h */,
+				9A74851E1BAF2062001D00A5 /* DBSEDataAccessObject.m */,
+				9A7485201BAF207E001D00A5 /* DBSEDataAccessObject+Team.h */,
+				9A7485211BAF207E001D00A5 /* DBSEDataAccessObject+Team.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		9A7485231BAF49A3001D00A5 /* Digest */ = {
+			isa = PBXGroup;
+			children = (
+				9A7485241BAF49CC001D00A5 /* DBSEHttpClient+Digests.h */,
+				9A7485251BAF49CC001D00A5 /* DBSEHttpClient+Digests.m */,
+			);
+			name = Digest;
+			sourceTree = "<group>";
+		};
+		9A7485271BAF4B5F001D00A5 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				9A7485281BAF4B5F001D00A5 /* NSDate+Utilities.h */,
+				9A7485291BAF4B5F001D00A5 /* NSDate+Utilities.m */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		9AA529511BB0921300AF7EB9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				9AA529521BB0923B00AF7EB9 /* DBSETimelineTableViewDataSource.h */,
+				9AA529531BB0923B00AF7EB9 /* DBSETimelineTableViewDataSource.m */,
+			);
+			name = DataSource;
 			sourceTree = "<group>";
 		};
 		9AAB47881B664D0A00AEBF98 = {
@@ -319,12 +440,11 @@
 		9AAB47BA1B664F6800AEBF98 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9A7484F11BAEFAB2001D00A5 /* Architecture */,
+				9A7484F11BAEFAB2001D00A5 /* Content Architecture */,
 				9AAB47BB1B664F6800AEBF98 /* AppDelegate */,
 				9AAB47BE1B664F6800AEBF98 /* Categories */,
 				9AAB47E41B66506400AEBF98 /* Controllers */,
 				9AAB47EA1B66515C00AEBF98 /* Constant&Utilities */,
-				9AAB47D61B664F6800AEBF98 /* Models */,
 				9AAB47D71B664F6800AEBF98 /* ViewControllers */,
 			);
 			path = Classes;
@@ -342,6 +462,7 @@
 		9AAB47BE1B664F6800AEBF98 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				9A7485271BAF4B5F001D00A5 /* Date */,
 				9AAB48141B66585300AEBF98 /* Colors */,
 				9AAB48191B66585300AEBF98 /* Font */,
 				9AAB47BF1B664F6800AEBF98 /* Cell */,
@@ -388,13 +509,6 @@
 				9AAB47CA1B664F6800AEBF98 /* NSString+Localizable.m */,
 			);
 			path = String;
-			sourceTree = "<group>";
-		};
-		9AAB47D61B664F6800AEBF98 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		9AAB47D71B664F6800AEBF98 /* ViewControllers */ = {
@@ -762,19 +876,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7485181BAF1A1A001D00A5 /* Team.m in Sources */,
+				9A7485191BAF1A1A001D00A5 /* Team+CoreDataProperties.m in Sources */,
 				9A376B011B66B8A2006E764A /* DBSETimelineTableView.m in Sources */,
 				9A099B0F1BA8C3040021AEB4 /* NSString+Encryption.m in Sources */,
+				9A74852A1BAF4B5F001D00A5 /* NSDate+Utilities.m in Sources */,
+				9AA529541BB0923B00AF7EB9 /* DBSETimelineTableViewDataSource.m in Sources */,
 				9AAB481D1B66585300AEBF98 /* UIColor+DBSEColors.m in Sources */,
 				9AAB47DA1B664F6800AEBF98 /* NSObject+ModelMapping.m in Sources */,
+				9A74850E1BAF175F001D00A5 /* dbstandupemail.xcdatamodeld in Sources */,
+				9A7485221BAF207E001D00A5 /* DBSEDataAccessObject+Team.m in Sources */,
 				9AAB481C1B66585300AEBF98 /* UIColor+Hex.m in Sources */,
+				9A0048981BB0A3CC00335D01 /* DBSETimelineTableViewCell.m in Sources */,
+				9A74851A1BAF1A1A001D00A5 /* User.m in Sources */,
 				9AAB481E1B66585300AEBF98 /* UIFont+DBSEFonts.m in Sources */,
 				9A7485061BAF00CD001D00A5 /* DBSESignInContentView.m in Sources */,
 				9AAB47DB1B664F6800AEBF98 /* NSObject+ObjectValidation.m in Sources */,
 				9AAB47E81B66506400AEBF98 /* DBSEUserCredentials.m in Sources */,
+				9A00489C1BB0A63B00335D01 /* DBSETimelineTableViewDelegate.m in Sources */,
+				9A7485261BAF49CC001D00A5 /* DBSEHttpClient+Digests.m in Sources */,
 				9A7484F51BAEFAF6001D00A5 /* DBSEContentManager.m in Sources */,
+				9A74851B1BAF1A1A001D00A5 /* User+CoreDataProperties.m in Sources */,
 				9AAB482A1B66617900AEBF98 /* DBSESignInViewController.m in Sources */,
 				9A7485011BAEFB11001D00A5 /* NSDictionary+Succeeded.m in Sources */,
 				9A7485001BAEFB11001D00A5 /* DBSEHttpClient.m in Sources */,
+				9A74851F1BAF2062001D00A5 /* DBSEDataAccessObject.m in Sources */,
 				9AAB47DC1B664F6800AEBF98 /* NSString+Localizable.m in Sources */,
 				9AAB48341B667A4000AEBF98 /* DBSEAlert.m in Sources */,
 				9A376B091B66BC04006E764A /* DBSEShieldView.m in Sources */,
@@ -997,6 +1123,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9A74850C1BAF175F001D00A5 /* dbstandupemail.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A74850D1BAF175F001D00A5 /* dbstandupemail.xcdatamodel */,
+			);
+			currentVersion = 9A74850D1BAF175F001D00A5 /* dbstandupemail.xcdatamodel */;
+			name = dbstandupemail.xcdatamodeld;
+			path = Architecture/DTM/dbstandupemail.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9AAB47891B664D0A00AEBF98 /* Project object */;
 }

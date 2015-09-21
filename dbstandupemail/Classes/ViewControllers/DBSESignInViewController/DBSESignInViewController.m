@@ -12,6 +12,7 @@
 
 #import "DBSEContentManager.h"
 
+#import "Team.h"
 
 #import <Masonry/Masonry.h>
 
@@ -82,24 +83,18 @@
     
     [self.shieldView beginShieldingView:self.view];
     
-    [contentManager_ findTeamsWithSuccessBlock:^(NSURLSessionDataTask *task, id responseObject) {
-        DLog(@"TEAM: %@", responseObject);
-        
+    [contentManager_ findFirstTeam:^(Team *savedTeam) {
         [weakSelf.shieldView endShieldingView];
         
-        if ([task.response dbse_responseSucceded]) {
-            
-//            [[DBSEUserCredentials sharedInstance] saveCredentials];
+        if (savedTeam) {
+            [[DBSEUserCredentials sharedInstance] saveCredentials];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[NSNotificationCenter defaultCenter] postNotificationName:kDBSEUpdateRootViewController object:nil];
             });
         }
-    } failureBlock:^(NSURLSessionDataTask *task, NSError *error) {
-        [weakSelf.shieldView endShieldingView];
-        
-        DLog(@"TEAM ERROR: %@", error);
     }];
 }
+
 
 @end

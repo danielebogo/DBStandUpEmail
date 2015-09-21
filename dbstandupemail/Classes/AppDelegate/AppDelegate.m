@@ -57,6 +57,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
 #pragma mark - Observer
 
 - (void)changeRootViewControllers:(NSNotification *)notification
@@ -70,6 +71,7 @@
     
     _window.rootViewController = self.rootViewController;
 }
+
 
 #pragma mark - Override
 
@@ -92,6 +94,13 @@
     }
     
     return navigationController;
+}
+
+#pragma mark - Private methods
+
+- (NSString *)dbse_sqliteName
+{
+    return [NSString stringWithFormat:@"%@.sqlite", [DBSEUserCredentials sharedInstance].userAuthId];
 }
 
 @end

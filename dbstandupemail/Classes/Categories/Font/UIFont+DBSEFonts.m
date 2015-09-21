@@ -8,7 +8,7 @@
 
 #import "UIFont+DBSEFonts.h"
 
-static const CGFloat kDBSEDefaultFontSize = 12.0;
+static const CGFloat kDBSEDefaultFontSize = 16.0;
 
 static NSString* NSStringFontNameFromType(DBSEFonts type) {
     switch (type) {

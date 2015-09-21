@@ -10,7 +10,7 @@
 
 @implementation UITableViewCell (Identifier)
 
-+ (NSString *)identifier
++ (NSString *)dbse_identifier
 {
     return [NSString stringWithFormat:@"k%@Identifier", NSStringFromClass([self class])];
 }

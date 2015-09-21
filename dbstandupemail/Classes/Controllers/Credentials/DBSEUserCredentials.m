@@ -8,6 +8,8 @@
 
 #import "DBSEUserCredentials.h"
 
+#import <MagicalRecord/MagicalRecord.h>
+
 
 NSString *const kDBSEKeychainServiceName = @"kDBSEKeychainServiceName";
 
@@ -34,6 +36,15 @@ NSString *const kDBSEKeychainServiceName = @"kDBSEKeychainServiceName";
     return self;
 }
 
+- (void)setUserAuthId:(NSString *)userAuthId
+{
+    _userAuthId = userAuthId;
+    
+    if ([userAuthId isValidString]) {
+        [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:[self dbse_sqliteName]];
+    }
+}
+
 
 #pragma mark - Public methods
 
@@ -58,7 +69,7 @@ NSString *const kDBSEKeychainServiceName = @"kDBSEKeychainServiceName";
         if (authId && token) {
             self.userAuthId = authId;
             self.userAuthToken = token;
-
+            
             DLog(@"User credentials %@ - %@", self.userAuthId, self.userAuthToken);
         }
     }
@@ -66,22 +77,22 @@ NSString *const kDBSEKeychainServiceName = @"kDBSEKeychainServiceName";
 
 - (void)saveCredentials
 {
-        NSMutableDictionary *query = [NSMutableDictionary dictionary];
+    NSMutableDictionary *query = [NSMutableDictionary dictionary];
+
+    [query setObject:(__bridge id) kSecClassGenericPassword forKey:(__bridge id) kSecClass];
+    [query setObject:kDBSEKeychainServiceName forKey:(__bridge id) kSecAttrService];
+
+    OSStatus err = SecItemDelete((__bridge CFDictionaryRef) query);
+    if (self.userAuthId && self.userAuthToken && (err == noErr || err == errSecItemNotFound)) {
+        [query removeAllObjects];
 
         [query setObject:(__bridge id) kSecClassGenericPassword forKey:(__bridge id) kSecClass];
         [query setObject:kDBSEKeychainServiceName forKey:(__bridge id) kSecAttrService];
+        [query setObject:self.userAuthId forKey:(__bridge id) kSecAttrAccount];
+        [query setObject:[self.userAuthToken dataUsingEncoding:NSUTF8StringEncoding] forKey:(__bridge id) kSecAttrGeneric];
 
-        OSStatus err = SecItemDelete((__bridge CFDictionaryRef) query);
-        if (self.userAuthId && self.userAuthToken && (err == noErr || err == errSecItemNotFound)) {
-            [query removeAllObjects];
-
-            [query setObject:(__bridge id) kSecClassGenericPassword forKey:(__bridge id) kSecClass];
-            [query setObject:kDBSEKeychainServiceName forKey:(__bridge id) kSecAttrService];
-            [query setObject:self.userAuthId forKey:(__bridge id) kSecAttrAccount];
-            [query setObject:[self.userAuthToken dataUsingEncoding:NSUTF8StringEncoding] forKey:(__bridge id) kSecAttrGeneric];
-
-            SecItemAdd((__bridge CFDictionaryRef) query, NULL);
-        }
+        SecItemAdd((__bridge CFDictionaryRef) query, NULL);
+    }
 }
 
 - (void)logout
@@ -96,29 +107,13 @@ NSString *const kDBSEKeychainServiceName = @"kDBSEKeychainServiceName";
     return [self.userAuthId isValidString] && [self.userAuthToken isValidString];
 }
 
-//- (TPSGUser *)userFromCredentials
-//{
-//    return [TPSGUser MR_findFirstByAttribute:@"userEmail"
-//                                   withValue:self.userEmail
-//                                   inContext:[NSManagedObjectContext MR_defaultContext]];
-//}
-//
-//- (TPSGUser *)userForDictionary:(NSDictionary *)dictionary
-//{
-//    NSDictionary *userModel = [dictionary copy];
-//    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-//    
-//    TPSGUser *user = [self userFromCredentials];
-//    
-//    if (![user isValidObject]) {
-//        user = [TPSGUser MR_createEntityInContext:context];
-//    }
-//    
-//    [user setData:userModel];
-//    [context MR_saveToPersistentStoreAndWait];
-//    
-//    return user;
-//}
+
+#pragma mark - Private methods
+
+- (NSString *)dbse_sqliteName
+{
+    return [NSString stringWithFormat:@"%@.sqlite", self.userAuthId];
+}
 
 
 @end

@@ -12,7 +12,6 @@
 extern NSString *const kDBSEKeychainServiceName;
 
 
-//@class TPSGUser;
 @interface DBSEUserCredentials : NSObject
 
 @property (nonatomic, strong) NSString *userAuthId;
@@ -24,8 +23,5 @@ extern NSString *const kDBSEKeychainServiceName;
 - (void)saveCredentials;
 - (void)logout;
 - (BOOL)isLoggedIn;
-
-//- (TPSGUser *)userForDictionary:(NSDictionary *)dictionary;
-//- (TPSGUser *)userFromCredentials;
 
 @end

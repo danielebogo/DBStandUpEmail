@@ -7,6 +7,8 @@
 //
 
 #import "DBSETimelineTableView.h"
+#import "DBSETimelineTableViewCell.h"
+
 
 @implementation DBSETimelineTableView
 
@@ -20,10 +22,12 @@
 
 - (void)setup
 {
-    self.translatesAutoresizingMaskIntoConstraints = NO;
-    
     self.backgroundColor = [UIColor whiteColor];
     self.backgroundView = nil;
+    self.separatorColor = [UIColor whiteColor];
+    
+    [self registerClass:[DBSETimelineTableViewCell class]
+ forCellReuseIdentifier:[DBSETimelineTableViewCell dbse_identifier]];
 }
 
 @end

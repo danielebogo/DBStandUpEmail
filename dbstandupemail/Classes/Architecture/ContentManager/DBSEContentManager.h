@@ -8,12 +8,12 @@
 
 @import Foundation;
 
-#import "DBSEHttpClient+Team.h"
 
-
+@class Team;
 @interface DBSEContentManager : NSObject
 
-- (void)findTeamsWithSuccessBlock:(AFHTTPSessionManagerBlockSuccess)successBlock
-                     failureBlock:(AFHTTPSessionManagerBlockError)failureBlock;
+- (void)findFirstTeam:(void(^)(Team *savedTeam))block;
+- (void)findDigestsWithTeamId:(NSString *)teamId
+                        block:(void(^)(NSArray *digests, NSError *error))block;
 
 @end

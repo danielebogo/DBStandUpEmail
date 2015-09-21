@@ -10,6 +10,6 @@
 
 @interface UITableViewCell (Identifier)
 
-+ (NSString *)identifier;
++ (NSString *)dbse_identifier;
 
 @end

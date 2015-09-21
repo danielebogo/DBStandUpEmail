@@ -10,7 +10,7 @@
 
 @interface UIColor (Hex)
 
-+ (UIColor*)tpsg_colorWithHexValue:(uint)hexValue andAlpha:(float)alpha;
-+ (UIColor*)tpsg_colorWithHexString:(NSString *)hexString andAlpha:(float)alpha;
++ (UIColor*)dbse_colorWithHexValue:(uint)hexValue andAlpha:(float)alpha;
++ (UIColor*)dbse_colorWithHexString:(NSString *)hexString andAlpha:(float)alpha;
 
 @end

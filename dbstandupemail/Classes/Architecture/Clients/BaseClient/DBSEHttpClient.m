@@ -50,7 +50,15 @@ static NSString *const kDBBaseURL = @"https://www.standupmail.com/api/external/v
         
         NSString *date = [dateFormatter_ stringFromDate:[NSDate date]];
         
-        NSString *canonicalString = [NSString stringWithFormat:@"%@,,%@,%@", contenType, request.URL.relativePath, date];
+        NSString *relativePath = request.URL.relativePath;
+        NSString *query = request.URL.query;
+        
+        if ([query isValidString]) {
+            relativePath = [relativePath stringByAppendingString:@"?"];
+            relativePath = [relativePath stringByAppendingString:query];
+        }
+        
+        NSString *canonicalString = [NSString stringWithFormat:@"%@,,%@,%@", contenType, relativePath, date];
         
         NSString *signature = [NSString hmacSha1WithSecret:[DBSEUserCredentials sharedInstance].userAuthToken data:canonicalString];
         
