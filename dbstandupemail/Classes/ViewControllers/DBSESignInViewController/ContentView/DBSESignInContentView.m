@@ -90,7 +90,7 @@
     [self addSubview:signButton_];
     
 #ifdef DEBUG
-    _fields[@(TPSGFieldsTypeAuthToken)] = @"Y2fqH5V+uNIoEPIoC0VDW/5J3T4KiSDH0WLoOFYp2S40MRSOih2bHn5EQourG8kTIxkdxbSQmmbd2Odaa2vFnQ==";
+    _fields[@(TPSGFieldsTypeAuthToken)] = @"BrAwmOvXLk6I8pk+qeKqFPPW28V4aiWRbGFB/Z4lZTichkHIV/tCiSq8XYwj9y7vh6B96b/w36djzriRsYnKOA==";
     _fields[@(TPSGFieldsTypeAuthId)] = @"1276";
     
     tokenField_.textField.text = _fields[@(TPSGFieldsTypeAuthToken)];

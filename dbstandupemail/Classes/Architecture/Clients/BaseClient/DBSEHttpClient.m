@@ -15,6 +15,7 @@ static NSString *const kDBBaseURL = @"https://www.standupmail.com/api/external/v
 
 @implementation DBSEHttpClient {
     NSDateFormatter *dateFormatter_;
+    NSLocale *usLocale_;
 }
 
 
@@ -31,8 +32,11 @@ static NSString *const kDBBaseURL = @"https://www.standupmail.com/api/external/v
     if (self) {
         DLog(@"BASE %@", self.baseURL);
         
+        usLocale_ = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        
         dateFormatter_ = [NSDateFormatter new];
         dateFormatter_.dateFormat = @"EEE',' dd MMM yyyy HH':'mm':'ss 'GMT'";
+        dateFormatter_.locale = usLocale_;
     }
     return self;
 }
@@ -49,6 +53,15 @@ static NSString *const kDBBaseURL = @"https://www.standupmail.com/api/external/v
         NSString *contenType = [request.HTTPBody isValidObject] ? @"application/json" : @"";
         
         NSString *date = [dateFormatter_ stringFromDate:[NSDate date]];
+        date = [date stringByReplacingOccurrencesOfString:@"am" withString:@""];
+        date = [date stringByReplacingOccurrencesOfString:@"a.m." withString:@""];
+        date = [date stringByReplacingOccurrencesOfString:@"AM" withString:@""];
+
+        date = [date stringByReplacingOccurrencesOfString:@"pm" withString:@""];
+        date = [date stringByReplacingOccurrencesOfString:@"p.m." withString:@""];
+        date = [date stringByReplacingOccurrencesOfString:@"PM" withString:@""];
+
+        date = [date stringByReplacingOccurrencesOfString:@"  " withString:@" "];
         
         NSString *relativePath = request.URL.relativePath;
         NSString *query = request.URL.query;

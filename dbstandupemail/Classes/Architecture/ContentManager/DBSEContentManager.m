@@ -53,6 +53,7 @@
                 }
             }
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            DLog(@"Eror %@", error);
             block(nil);
         }];
     } else {
